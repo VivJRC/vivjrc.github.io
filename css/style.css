@@ -1,0 +1,1066 @@
+
+/******************************************************************************
+
+               Html Portefolio   Viviane Cooper 2023
+
+*******************************************************************************/
+
+
+h1
+{
+	/*color: purple;*/
+	margin-left: 3%;
+	margin-right: 3%;
+	text-align: center;
+}
+/*******************************************************************************/
+h3
+{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+/*******************************************************************************/
+h4
+{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+/*******************************************************************************/
+
+p
+{
+	margin-left: 3%;
+	margin-right: 3%;
+	display: inline;
+}
+/*******************************************************************************/
+
+/* Supprime les marges appliqué par défaut sur certains navigateur + ajoute un background */
+body
+{
+	/* background-color: rgba(0,0,255, 0.3); */
+	background-color: #8BC6EC;
+	background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+	margin: 0px;
+	padding: 0px;
+	padding-top: 50px;
+}
+
+/* Pour la barre de navigation 
+Fait en sorte qu'elle soit toujours en haut, et devant tout les éléments
+Puis elle prend toute la largeure et une couleur de fond*/
+nav
+{
+	position: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-image: url("../image/motif_nav.png");
+	background-repeat: repeat-x;
+	
+}
+
+/* supprime les différentes marge créé par défaut avec les listes */
+nav ul
+{
+	margin-left: 1px;
+	margin-right: 1px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+/* Supprime les points au début de chaque élément et les aligne sur la gauche */
+nav li
+{
+	list-style-type: none;
+	float: left;
+}
+
+/* Met les liens en "inline-block" à la place de block, puis supprime la barre de soulignage tout en rajoutant de l'espace entre chaque élément, ainsi qu'en 
+haut et en bas */
+nav a
+{
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 60px;
+}
+
+/* Change la couleur du fond lorsque l'on passe la souris dessus */
+nav li:hover
+{
+	background-color: #8d8d8d;
+}
+
+/* Change l'apparence du texte lorsque l'on passe la souris dessus */
+nav li:hover a
+{
+	text-decoration: underline;
+	color: blue;
+}
+
+/*******************************************************************************/
+
+/* Permet de changer le curseur lors des passages sur les liens */
+a, input.click
+{
+	cursor: pointer;
+}
+/*******************************************************************************/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-left: 3%;
+  margin-right: 3%;
+  justify-content: flex-start;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 50%;
+}
+
+.images a {
+  width: 180px;
+  height: 120px;
+  margin: 0.5%;
+}
+
+.images a img {
+  width: 180px;
+  height: 120px;
+}
+.images video {
+  width: 180px;
+  height: 120px;
+}
+
+
+.text {
+  margin-left:5px;
+  flex-grow: 0;
+  flex-basis: auto;
+  break-inside: avoid;
+  clear: both;
+  width: 45%; 
+}
+
+.imagecontainer
+{
+	width: 100%;
+	text-align: center;
+}
+
+/*Les autres zoom (oui c'est pas optimisé mais bon mdr)*/
+
+#zoom1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+#zoom1:target {
+visibility: visible;
+opacity: 1;
+}
+
+#zoom1 img {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+max-width: 90%;
+max-height: 90%;
+}
+
+#zoom1 .close {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 2rem;
+color: white;
+text-decoration: none;
+z-index: 99999;
+}
+
+#zoom1 .close:hover {
+color: red;
+}
+
+
+#zoom2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+#zoom2:target {
+visibility: visible;
+opacity: 1;
+}
+
+#zoom2 img {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+max-width: 90%;
+max-height: 90%;
+}
+
+#zoom2 .close {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 2rem;
+color: white;
+text-decoration: none;
+z-index: 99999;
+}
+
+#zoom2 .close:hover {
+color: red;
+}
+
+
+#zoom3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+#zoom3:target {
+visibility: visible;
+opacity: 1;
+}
+
+#zoom3 img {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+max-width: 90%;
+max-height: 90%;
+}
+
+#zoom3 .close {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 2rem;
+color: white;
+text-decoration: none;
+z-index: 99999;
+}
+
+#zoom3 .close:hover {
+color: red;
+}
+
+
+#zoom4 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom4:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom4 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom4 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom4 .close:hover {
+  color: red;
+}
+
+
+#zoom5 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom5:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom5 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom5 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom5 .close:hover {
+  color: red;
+}
+
+
+#zoom6 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom6:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom6 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom6 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom6 .close:hover {
+  color: red;
+}
+
+#zoom7 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom7:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom7 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom7 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom7 .close:hover {
+  color: red;
+}
+
+#zoom8 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom8:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom8 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom8 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom8 .close:hover {
+  color: red;
+}
+
+#zoom9 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom9:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom9 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom9 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom9 .close:hover {
+  color: red;
+}
+
+#zoom10 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom10:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom10 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom10 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom10 .close:hover {
+  color: red;
+}
+
+#zoom11 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom11:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom11 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom11 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom11 .close:hover {
+  color: red;
+}
+
+#zoom12 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom12:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom12 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom12 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom12 .close:hover {
+  color: red;
+}
+
+#zoom13 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom13:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom13 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom13 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom13 .close:hover {
+  color: red;
+}
+
+#zoom14 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom14:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom14 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom14 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom14 .close:hover {
+  color: red;
+}
+
+#zoom15 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom15:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom15 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom15 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom15 .close:hover {
+  color: red;
+}
+
+#zoom16 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom16:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom16 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom16 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom16 .close:hover {
+  color: red;
+}
+
+#zoom17 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom17:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom17 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom17 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom17 .close:hover {
+  color: red;
+}
+
+#zoom18 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom18:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom18 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom18 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom18 .close:hover {
+  color: red;
+}
+
+#zoom19 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom19:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom19 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom19 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom19 .close:hover {
+  color: red;
+}
+
+#zoom20 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom20:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom20 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom20 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom20 .close:hover {
+  color: red;
+}
+
+#zoom21 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom21:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom21 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom21 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom21 .close:hover {
+  color: red;
+}
+
+#zoom22 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom22:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom22 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom22 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom22 .close:hover {
+  color: red;
+}
