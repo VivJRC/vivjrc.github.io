@@ -1064,3 +1064,167 @@ color: red;
 #zoom22 .close:hover {
   color: red;
 }
+
+#zoom23 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom23:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom23 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom23 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom23 .close:hover {
+  color: red;
+}
+
+#zoom24 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom24:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom24 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom24 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom24 .close:hover {
+  color: red;
+}
+
+#zoom25 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom25:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom25 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom25 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom25 .close:hover {
+  color: red;
+}
+
+#zoom26 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+  
+#zoom26:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#zoom26 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom26 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+#zoom26 .close:hover {
+  color: red;
+}
