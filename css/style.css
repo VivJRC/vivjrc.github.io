@@ -39,11 +39,11 @@ p
 body
 {
 	/* background-color: rgba(0,0,255, 0.3); */
-	background-color: #8BC6EC;
-	background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-	margin: 0px;
-	padding: 0px;
-	padding-top: 50px;
+  min-height: 90vh;
+	background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+	margin: 0;
+	padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Pour la barre de navigation 
@@ -75,6 +75,7 @@ nav li
 {
 	list-style-type: none;
 	float: left;
+  transition: 0.2s;
 }
 
 /* Met les liens en "inline-block" à la place de block, puis supprime la barre de soulignage tout en rajoutant de l'espace entre chaque élément, ainsi qu'en 
@@ -84,12 +85,18 @@ nav a
 	display: inline-block;
 	text-decoration: none;
 	padding: 5px 60px;
+  font-weight: 600;
+  color: #383838;
+  transition: 0.2s;
+
 }
 
 /* Change la couleur du fond lorsque l'on passe la souris dessus */
 nav li:hover
 {
 	background-color: #8d8d8d;
+  transition: 0.2s;
+
 }
 
 /* Change l'apparence du texte lorsque l'on passe la souris dessus */
@@ -97,6 +104,8 @@ nav li:hover a
 {
 	text-decoration: underline;
 	color: blue;
+  transition: 0.2s;
+
 }
 
 /*******************************************************************************/
@@ -107,6 +116,69 @@ a, input.click
 	cursor: pointer;
 }
 /*******************************************************************************/
+
+/*Code CSS de la page contact.html*/
+
+#cv_h1 {
+	margin-top: 5%;
+}
+
+#contact {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.contact_div {
+  border-radius: 5%;
+  margin-top: 5%;
+  overflow: hidden;
+  text-align: center;
+	width: 20%;
+	min-height: 300px;
+	max-height: max-content;
+	background-color: rgb(141, 178, 247);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contact_div img {
+  width: 150%;
+	position: relative;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.contact_div p {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center;
+}
+
+.contact_div a {
+  width: max-content;
+  text-decoration: none;
+  color: #383838;
+  font-weight: bold;
+  transition: 0.2s;
+  padding: 2px;
+  margin-top: 2%;
+  border: rgb(114, 113, 113) solid 2px;
+  transition: 0.5s;
+}
+
+.contact_div a:hover {
+  text-decoration: underline;
+	color: blue;
+  border: rgb(54, 54, 54) solid 2px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+/*******************************************************************************/
+
 .container {
   display: flex;
   flex-wrap: wrap;
