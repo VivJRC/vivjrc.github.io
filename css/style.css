@@ -56,8 +56,9 @@ nav
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-image: url("../image/motif_nav.png");
-	background-repeat: repeat-x;
+	background: linear-gradient(135deg, #8d70fe 0%, #8c1090 100%);
+	/*background-image: url("../image/motif_nav.png");
+	background-repeat: repeat-x;*/
 	
 }
 
@@ -94,7 +95,7 @@ nav a
 /* Change la couleur du fond lorsque l'on passe la souris dessus */
 nav li:hover
 {
-	background-color: #8d8d8d;
+	background-color: #4e3987;
   transition: 0.2s;
 
 }
