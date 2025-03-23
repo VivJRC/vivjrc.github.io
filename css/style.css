@@ -20,12 +20,6 @@ h3
 	margin-right: 3%;
 }
 /*******************************************************************************/
-h4
-{
-	margin-left: 3%;
-	margin-right: 3%;
-}
-/*******************************************************************************/
 
 p
 {
@@ -179,6 +173,39 @@ a, input.click
 }
 
 /*******************************************************************************/
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+}
+.carousel-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.slide {
+  height: 300px;
+  width: auto;
+  display: none;
+  margin-bottom: 10px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev { left: 0; }
+.next { right: 0; }
+
+/*******************************************************************************/
 
 .container {
   display: flex;
@@ -198,6 +225,14 @@ a, input.click
   width: 50%;
 }
 
+.EspaceBottom {
+  height: 40px;
+}
+
+.center-container {
+  text-align:center;
+}
+
 .images a {
   width: 180px;
   height: 120px;
@@ -209,8 +244,8 @@ a, input.click
   height: 120px;
 }
 .images video {
-  width: 180px;
-  height: 120px;
+  width: 100%;
+  height: auto;
 }
 
 

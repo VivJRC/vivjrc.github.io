@@ -1,0 +1,53 @@
+<h1 id="cv_h1">Portfolio</h1>
+
+<main id="index">
+    <h3>C# & Unity</h3>
+    <div class="container">
+        <div class="carousel">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="carousel-images">
+                <img class="slide" src="image/PotionExpedition1.png">
+                <img class="slide" src="image/PotionExpedition2.png">
+                <img class="slide" src="image/PotionExpedition3.png">
+                <img class="slide" src="image/PotionExpedition4.png">
+                <img class="slide" src="image/PotionExpedition5.png">
+                <img class="slide" src="image/PotionExpedition6.png">
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <div class="text">
+            <p>
+                Il s'agit de mon premier jeu Unity et de mon premier jeu 3D, l'objectif est 
+                d'explorer une île en quête d'ingrédients pour qu'une sorcière concocte des potions.
+            </p>
+            <br>
+            Les contrôles du jeu sont :
+            <br> ZQSD pour se déplacer
+            <br> espace pour sauter
+            <br> la souris pour tourner la caméra
+            <br> M pour regarder la carte (pour faciliter le jeu :)
+            <p>
+                <br>
+                Jouer au jeu <a href="https://vivjrc.github.io/thePotionExpedition/">JOUER</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    
+    function changeSlide(direction) {
+        slides[slideIndex].style.display = "none";
+        slideIndex = (slideIndex + direction + slides.length) % slides.length;
+        slides[slideIndex].style.display = "block";
+    }
+    
+    // Initialisation : afficher la première image
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndex].style.display = "block";
+</script>
+
+<style>
+</style>
